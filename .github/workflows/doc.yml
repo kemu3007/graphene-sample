@@ -19,12 +19,6 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '16'
-    - uses: actions/setup-go@v3
-      with:
-        go-version: '^1.13.1'
-    - name: go install
-      run: |
-        go install github.com/Code-Hex/gqldoc/cmd/gqldoc@latest
     - name: npm install
       run: |
         npm install -g @2fd/graphdoc
@@ -38,13 +32,16 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
     - name: generate document
       run: |
-        make doc
-    - name: check doc
-      run: |
-        git diff --exit-code --name-only
-      continue-on-error: true
-    - name: push doc
-      run: |
-        git add .
-        git commit -m "update docs"
-        git push origin main
+        make docs
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
+    - uses: actions/upload-artifact@v3
+      with:
+        name: schema
+        path: |
+          schema.json
+          schema.graphql
+
+

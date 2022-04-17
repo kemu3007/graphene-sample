@@ -5,6 +5,6 @@ lint:
 test:
 	python src/manage.py test
 schema:
-	python src/manage.py graphql_schema --out schema.json
-doc:
-	python src/manage.py graphql_schema --out schema.json  && graphdoc -s schema.json -o docs/graphdoc/ --force && gqldoc -s schema.json -o docs/gqldoc/
+	python src/manage.py graphql_schema --out schema.graphql
+docs:
+	python src/manage.py graphql_schema --out schema.json && python src/manage.py graphql_schema --out schema.graphql && graphdoc -s schema.json -o docs/ --force
