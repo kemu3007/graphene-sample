@@ -120,11 +120,6 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Directives</h4>
     <ul>
-        <li  title="deprecated">
-            <a href="deprecated.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                deprecated
-            </a>
-        </li>
         <li  title="include">
             <a href="include.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 include
@@ -152,7 +147,8 @@
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
         <h1 class="slds-text-heading--large">UserType</h1>
-        <div class="slds-text-body--regular"></div>
+        <div class="slds-text-body--regular"><p>Django Default User</p>
+</div>
     </div>
 </section>
 <section>
@@ -163,7 +159,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">UserType</span> {</li><li></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="meta">password</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">lastLogin</span>: <a class="support type" href="datetime.doc.html">DateTime</a> </span></li><li></li><li><span class="tab"><span class="meta">isSuperuser</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="meta">username</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">firstName</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">lastName</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">email</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">isStaff</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="meta">isActive</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="meta">dateJoined</span>: <a class="support type" href="datetime.doc.html">DateTime</a>! </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">UserType</span> {</li><li></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>! </span></li><li></li><li><span class="tab"><span class="meta">password</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">lastLogin</span>: <a class="support type" href="datetime.doc.html">DateTime</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   Designates that this user has all permissions without explicitly assigning them.</span></span></li><li><span class="tab"><span class="meta">isSuperuser</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></span></li><li><span class="tab"><span class="meta">username</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">firstName</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">lastName</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="meta">email</span>: <a class="support type" href="string.doc.html">String</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Designates whether the user can log into this admin site.</span></span></li><li><span class="tab"><span class="meta">isStaff</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="comment line">#   Designates whether this user should be treated as active. Unselect this instead </span></span></li><li><span class="tab"><span class="comment line">#   of deleting accounts.</span></span></li><li><span class="tab"><span class="meta">isActive</span>: <a class="support type" href="boolean.doc.html">Boolean</a>! </span></li><li></li><li><span class="tab"><span class="meta">dateJoined</span>: <a class="support type" href="datetime.doc.html">DateTime</a>! </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -174,7 +170,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="query.doc.html" title="Query - ">Query<em></em></a><li></ul>
+        <ul class="require-by"><li><a href="query.doc.html" title="Query - ">Query<em>null</em></a><li></ul>
     </div>
 </section>
 <footer>
