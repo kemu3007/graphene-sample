@@ -35,8 +35,7 @@ jobs:
         make doc
     - name: check doc
       run: |
-        git add -N schema.graphql docs/
-        git diff --exit-code
+        git diff --exit-code --name-only
       continue-on-error: true
     - name: push doc
       run: |
