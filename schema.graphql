@@ -11,7 +11,7 @@ type ContenttypeType {
 scalar DateTime
 
 type Query {
-  users: [UserType]
+  users: [UserType] @deprecated(reason: "\\u30bb\\u30ad\\u30e5\\u30ea\\u30c6\\u30a3\\u4e0a\\u5b58\\u5728\\u3057\\u3066\\u306f\\u3044\\u3051\\u306a\\u3044API\\u306e\\u305f\\u3081deprecated")
   contenttypes: [ContenttypeType]
 }
 
