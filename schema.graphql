@@ -1,0 +1,30 @@
+schema {
+  query: Query
+}
+
+type ContenttypeType {
+  id: ID!
+  appLabel: String!
+  model: String!
+}
+
+scalar DateTime
+
+type Query {
+  users: [UserType]
+  contenttypes: [ContenttypeType]
+}
+
+type UserType {
+  id: ID!
+  password: String!
+  lastLogin: DateTime
+  isSuperuser: Boolean!
+  username: String!
+  firstName: String!
+  lastName: String!
+  email: String!
+  isStaff: Boolean!
+  isActive: Boolean!
+  dateJoined: DateTime!
+}
