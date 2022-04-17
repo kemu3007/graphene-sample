@@ -19,6 +19,12 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '16'
+    - uses: actions/setup-go@v3
+      with:
+        go-version: '^1.13.1'
+    - name: go install
+      run: |
+        go install github.com/Code-Hex/gqldoc/cmd/gqldoc@latest
     - name: npm install
       run: |
         npm install -g @2fd/graphdoc
