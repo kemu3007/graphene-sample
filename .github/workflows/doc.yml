@@ -33,11 +33,13 @@ jobs:
     - name: generate document
       run: |
         make doc
+    - name: check doc
+      run: |
+        git add -N schema.graphql docs/
+        git diff --exit-code
+      continue-on-error: true
     - name: push doc
       run: |
-        git add schema.graphql docs/
-        if ! git diff --exit-code --quiet
-        then
-          git commit -m "update docs"
-          git push origin main
-        fi
+        git add .
+        git commit -m "update docs"
+        git push origin main
