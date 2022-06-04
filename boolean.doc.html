@@ -45,6 +45,11 @@
                 DateTime
             </a>
         </li>
+        <li  title="Float">
+            <a href="float.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Float
+            </a>
+        </li>
         <li  title="ID">
             <a href="id.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ID
@@ -75,9 +80,24 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
+        <li  title="ArticleType">
+            <a href="articletype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ArticleType
+            </a>
+        </li>
         <li  title="ContenttypeType">
             <a href="contenttypetype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ContenttypeType
+            </a>
+        </li>
+        <li  title="DjangoDebug">
+            <a href="djangodebug.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DjangoDebug
+            </a>
+        </li>
+        <li  title="DjangoDebugSQL">
+            <a href="djangodebugsql.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DjangoDebugSQL
             </a>
         </li>
         <li  title="UserType">
@@ -170,7 +190,17 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="usertype.doc.html" title="UserType - Django Default User">UserType<em>Django Default User</em></a><li><li><a href="directive.spec.html" title="__Directive - A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
+        <ul class="require-by"><li><a href="djangodebugsql.doc.html" title="DjangoDebugSQL - Represents a single database query made to a Django managed DB.">DjangoDebugSQL<em>Represents a single database query made to a Django managed DB.</em></a><li><li><a href="usertype.doc.html" title="UserType - 
+    Users within the Django authentication system are represented by this
+    model.
+
+    Username and password are required. Other fields are optional.
+    ">UserType<em>
+    Users within the Django authentication system are represented by this
+    model.
+
+    Username and password are required. Other fields are optional.
+    </em></a><li><li><a href="directive.spec.html" title="__Directive - A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
 
 In some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.">__Directive<em>A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.
 

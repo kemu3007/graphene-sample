@@ -45,6 +45,11 @@
                 DateTime
             </a>
         </li>
+        <li  title="Float">
+            <a href="float.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Float
+            </a>
+        </li>
         <li  title="ID">
             <a href="id.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ID
@@ -75,9 +80,24 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
+        <li  title="ArticleType">
+            <a href="articletype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                ArticleType
+            </a>
+        </li>
         <li  title="ContenttypeType">
             <a href="contenttypetype.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ContenttypeType
+            </a>
+        </li>
+        <li  title="DjangoDebug">
+            <a href="djangodebug.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DjangoDebug
+            </a>
+        </li>
+        <li  title="DjangoDebugSQL">
+            <a href="djangodebugsql.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                DjangoDebugSQL
             </a>
         </li>
         <li  title="UserType">
@@ -158,7 +178,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:28px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line">#   ユーザ情報一覧取得API</span></span></li><li><span class="tab"><span class="meta">users</span>: [<a class="support type" href="usertype.doc.html">UserType</a>] <span class="keyword operator ts">@deprecated</span>( reason: <span class="string">"セキュリティ上存在してはいけないAPIのためdeprecated" </span> )</span></li><li></li><li><span class="tab"><span class="comment line">#   コンテンツタイプ一覧取得API</span></span></li><li><span class="tab"><span class="meta">contenttypes</span>: [<a class="support type" href="contenttypetype.doc.html">ContenttypeType</a>] </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="meta">_debug</span>: <a class="support type" href="djangodebug.doc.html">DjangoDebug</a> </span></li><li></li><li><span class="tab"><span class="comment line">#   ユーザ情報一覧取得API</span></span></li><li><span class="tab"><span class="meta">users</span>: [<a class="support type" href="usertype.doc.html">UserType</a>] <span class="keyword operator ts">@deprecated</span>( reason: <span class="string">"セキュリティ上存在してはいけないAPIのためdeprecated" </span> )</span></li><li></li><li><span class="tab"><span class="comment line">#   コンテンツタイプ一覧取得API</span></span></li><li><span class="tab"><span class="meta">contenttypes</span>: [<a class="support type" href="contenttypetype.doc.html">ContenttypeType</a>] </span></li><li></li><li><span class="tab"><span class="comment line">#   記事一覧取得API</span></span></li><li><span class="tab"><span class="meta">articles</span>: [<a class="support type" href="articletype.doc.html">ArticleType</a>] </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
